@@ -21,7 +21,7 @@ export class UserComponent {
       this.hasBirthday();
       console.log(this.age);
    }
-   // Own customer method:
+   // Own custom method:
    sayHello() {
       console.log(`Hello ${this.firstName}`);
    }
