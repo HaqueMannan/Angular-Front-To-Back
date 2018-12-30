@@ -4,19 +4,31 @@
    <form (submit)="onSubmit($event)">
       <div class="form-group">
          <label>First Name</label>
-         <input class="form-control" type="text" name="firstName" (keydown)="fireEvent($event)">
-         <label>Last Name</label>
-         <input class="form-control" type="text" name="lastName">
-         <label>Age</label>
-         <input class="form-control" type="number" name="age">
-         <label>Street Address</label>
-         <input class="form-control" type="text" name="street">
-         <label>City</label>
-         <input class="form-control" type="text" name="city">
-         <label>Country</label>
-         <input class="form-control" type="text" name="country">
+         <input class="form-control" type="text" name="firstName" [(ngModel)]="user.firstName">
+         <!-- Demonstrates two-way binding with the input field usng ngModel directive -->
+         {{ user.firstName }}
       </div>
-      <button class="btn btn-secondary btn-block mb-3" [disabled]="!enableAdd" (click)="addUser({firstName: 'Elena', lastName: 'Gilbert', isActive: true})">Add New User</button>
+      <div class="form-group">
+         <label>Last Name</label>
+         <input class="form-control" type="text" name="lastName" [(ngModel)]="user.lastName">
+      </div>
+         <div class="form-group">
+         <label>Age</label>
+         <input class="form-control" type="number" name="age" [(ngModel)]="user.age">
+      </div>
+         <div class="form-group">
+         <label>Street Address</label>
+         <input class="form-control" type="text" name="street" [(ngModel)]="user.address.street">
+      </div>
+         <div class="form-group">
+         <label>City</label>
+         <input class="form-control" type="text" name="city" [(ngModel)]="user.address.city">
+      </div>
+      <div class="form-group">
+         <label>Country</label>
+         <input class="form-control" type="text" name="country" [(ngModel)]="user.address.country">
+      </div>
+      <button class="btn btn-secondary btn-block mb-3" [disabled]="user.firstName == '' || user.lastName == ''" (click)="addUser()">Add New User</button>
    </form>
 </div>
 <ul class="list-unstyled" *ngIf="loaded && users?.length > 0">

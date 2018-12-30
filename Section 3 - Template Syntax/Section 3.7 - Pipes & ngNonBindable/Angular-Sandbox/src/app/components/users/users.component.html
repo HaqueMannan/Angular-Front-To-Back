@@ -17,7 +17,7 @@
                <li class="list-group-item">Age: {{ user.age }}</li>
                <li class="list-group-item">Address: {{ user.address.street }} {{ user.address.city }} {{ user.address.country }}</li>
                <li class="list-group-item">Balance: {{ user.balance | currency:"GBP" }} until {{ .5 | percent }}</li>
-               <li class="list-group-item">Joined: {{ user.registered | date:"dd/mm/yyyy" }} {{ user.registered | date:"shortTime" }}</li>
+               <li class="list-group-item">Joined: {{ user.registered | date:"dd/MM/yyyy" }} {{ user.registered | date:"shortTime" }}</li>
                <!-- Using ngNonBindable prevents any binding of data to the element. -->
                <li class="list-group-item" ngNonBindable><pre>{{ 5 | number:"1.2" }}</pre></li>
             </ul>
