@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand navbar-dark bg-primary mb-4">
+   <div class="container">
+      <a class="navbar-brand" routerLink="/">Angular Sandbox</a>
+      <div>
+         <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+               <a class="nav-link" routerLink="/" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Home</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" routerLink="/users" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}>Users</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" routerLink="/posts" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}>Posts</a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
