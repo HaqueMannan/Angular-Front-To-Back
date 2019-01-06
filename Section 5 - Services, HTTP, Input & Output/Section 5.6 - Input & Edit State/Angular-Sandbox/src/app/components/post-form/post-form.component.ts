@@ -8,7 +8,6 @@ import { Post } from '../../models/Post';
    styleUrls: ['./post-form.component.css']
 })
 export class PostFormComponent implements OnInit {
-   post: Post;
    @Output() newPost: EventEmitter<Post> = new EventEmitter;
    @Input() currentPost: Post;
    @Input() isEdit: boolean;
