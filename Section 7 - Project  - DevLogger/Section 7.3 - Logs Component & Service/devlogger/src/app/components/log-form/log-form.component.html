@@ -1,0 +1,9 @@
+<div class="card card-body mb-3">
+   <form>
+      <div class="form-group">
+         <input class="form-control" type="text" placeholder="Add a log">
+      </div>
+      <input class="btn btn-light" type="submit" value="Add Log" [disabled]=!this.text>
+      <button class="btn btn-warning" type="button" [hidden]=!this.text>Clear</button>
+   </form>
+</div>
