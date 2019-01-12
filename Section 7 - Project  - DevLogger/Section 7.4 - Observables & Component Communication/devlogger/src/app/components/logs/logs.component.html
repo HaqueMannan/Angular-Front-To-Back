@@ -1,0 +1,7 @@
+<ul class="list-group">
+   <li class="list-group-item align-items-center d-flex justify-content-between" *ngFor="let log of logs">
+      <a href="#" (click)="onSelect(log)">{{ log.text }}</a>
+      <span class="log-date">{{ log.date | date: 'dd/MM/yyyy hh:mm a' }}</span>
+      <i class="fa fa-remove"></i>
+   </li>
+</ul>
