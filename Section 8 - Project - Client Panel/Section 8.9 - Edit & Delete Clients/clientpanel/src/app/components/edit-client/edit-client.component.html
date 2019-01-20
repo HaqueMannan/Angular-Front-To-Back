@@ -102,7 +102,7 @@
                #clientBalance="ngModel"
                [ngClass]="{'is-invalid': clientLastName.errors && clientLastName.touched}"
                [(ngModel)]="client.balance"
-               [disabled]="disableBalanceOnAdd"
+               [disabled]="disableBalanceOnEdit"
             >
          </div>
          <input class="btn btn-primary btn-block" type="submit" value="Submit">
